@@ -23,17 +23,26 @@
   margin: -1px;
 }
 
+.address-list, .employee-social-list,
+.company-social-list, .team-list, .examples-list, .advantages-list, .work-list, .filter-list, .site-nav,
+.contacts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.subscribe-form__button, .clients-list__link, .employee-social-list__link,
+.company-social-list__link, .examples-description, .advantages-list__icon, .main-section__button, .modal-window__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   color: var(--primary-text-color);
   background-color: var(--btn-text-color);
   font-family: Roboto, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 0.03em;
-}
-
-.list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .flex-box {
@@ -90,9 +99,6 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -277,10 +283,12 @@ textarea:focus {
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.logo:hover, .logo:focus {
+  color: var(--accent-text-color);
+  fill: var(--accent-text-color);
+}
 
 .logo--blue,
-.logo:hover,
-.logo:focus,
 .site-nav__link--hovered:hover,
 .site-nav__link--hovered:focus,
 .contacts__link--hovered:hover,
@@ -294,21 +302,20 @@ textarea:focus {
 .site-nav,
 .contacts {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .site-nav__item {
   position: relative;
 }
+.site-nav__item:not(:first-child) {
+  margin-left: 50px;
+}
+.site-nav__item:first-child {
+  margin-left: 93px;
+}
 
 .site-nav .site-nav__link--blue {
   color: var(--accent-text-color);
-}
-
-.site-nav__item:first-child {
-  margin-left: 93px;
 }
 
 .site-nav__link--blue::after {
@@ -343,10 +350,6 @@ textarea:focus {
 
 .site-nav__link {
   color: var(--secondary-text-color);
-}
-
-.site-nav__item:not(:first-child) {
-  margin-left: 50px;
 }
 
 .contacts__link,
@@ -399,9 +402,6 @@ textarea:focus {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   min-width: 216px;
   height: 50px;
   border: none;
@@ -414,9 +414,7 @@ textarea:focus {
   margin-right: auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.main-section__button:hover,
-.main-section__button:focus {
+.main-section__button:hover, .main-section__button:focus {
   background-color: var(--order-btn-active);
 }
 
@@ -437,13 +435,15 @@ textarea:focus {
   border-radius: 4px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), filter 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+.filter-list__button:hover, .filter-list__button:focus {
+  color: var(--btn-text-color);
+  background-color: var(--accent-text-color);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
 
 .filter-list {
   display: flex;
   justify-content: center;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   margin-bottom: 34px;
 }
 
@@ -451,19 +451,9 @@ textarea:focus {
   margin-left: 8px;
 }
 
-.filter-list__button:hover,
-.filter-list__button:focus {
-  color: var(--btn-text-color);
-  background-color: var(--accent-text-color);
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
 .work-list {
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   margin-top: calc(-1 * var(--card-set-gap));
   margin-left: calc(-1 * var(--card-set-gap));
 }
@@ -486,9 +476,7 @@ textarea:focus {
   transform: translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.work-list__link:hover .work-list__text,
-.work-list__link:focus .work-list__text {
+.work-list__link:hover .work-list__text, .work-list__link:focus .work-list__text {
   transform: translateY(0);
 }
 
@@ -498,17 +486,16 @@ textarea:focus {
   margin-left: var(--card-set-gap);
 }
 
-.work-list__link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-  cursor: pointer;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .work-list__link {
   font-family: inherit;
   color: inherit;
   text-decoration: none;
   display: block;
+}
+.work-list__link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .work-type__name {
@@ -566,9 +553,6 @@ textarea:focus {
   margin-bottom: 30px;
   background-color: var(--background-color-secondary);
   border-radius: 4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* .icon-item{
@@ -605,15 +589,8 @@ textarea:focus {
     background-repeat: no-repeat;
     background-position: center;
 } */
-.advantages-list__item:not(:first-child) {
-  margin-left: 30px;
-}
-
 .advantages-list {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .advantages-list__title {
@@ -636,13 +613,13 @@ textarea:focus {
 .advantages-list__item {
   width: 270px;
 }
+.advantages-list__item:not(:first-child) {
+  margin-left: 30px;
+}
 
 .examples-list {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .examples-list__item {
@@ -658,9 +635,6 @@ textarea:focus {
 
 .examples-description {
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 70px;
   background-color: rgba(47, 48, 58, 0.8);
@@ -711,7 +685,6 @@ textarea:focus {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 0px 0px 4px 4px;
 }
-
 .team-list__item:not(:first-child) {
   margin-left: 30px;
 }
@@ -722,9 +695,6 @@ textarea:focus {
 
 .team-list {
   display: flex;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   background-color: var(--background-color-secondary);
 }
 
@@ -732,9 +702,6 @@ textarea:focus {
 .company-social-list {
   display: flex;
   gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .employee-social-list__item,
@@ -747,16 +714,11 @@ textarea:focus {
 .company-social-list__link {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
   fill: var(--social-links-fill);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.employee-social-list__link:hover,
-.employee-social-list__link:focus,
+.employee-social-list__link:hover, .employee-social-list__link:focus,
 .company-social-list__link:hover,
 .company-social-list__link:focus {
   background-color: var(--order-btn-active);
@@ -778,19 +740,14 @@ textarea:focus {
 }
 
 .clients-list__link {
-  display: flex;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  align-items: center;
   fill: var(--social-links-fill);
   border-radius: 4px;
   border: 1px solid var(--social-links-fill);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.clients-list__link:hover,
-.clients-list__link:focus {
+.clients-list__link:hover, .clients-list__link:focus {
   fill: var(--accent-text-color);
   border: 1px solid var(--accent-text-color);
 }
@@ -852,21 +809,14 @@ textarea:focus {
   line-height: 1.71;
   font-style: normal;
 }
+.address-list__item:not(:first-child) {
+  margin-top: 9px;
+}
 
 .address-list__link {
   color: inherit;
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address-list__item:not(:first-child) {
-  margin-top: 9px;
-}
-
-.address-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .join-title {
@@ -908,9 +858,6 @@ input[placeholder=E-mail] {
 }
 
 .subscribe-form__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 10px;
   min-width: 200px;
   height: 50px;
@@ -928,8 +875,6 @@ input[placeholder=E-mail] {
   padding: 10px 28px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-.subscribe-form__button:hover,
-.subscribe-form__button:focus {
+.subscribe-form__button:hover, .subscribe-form__button:focus {
   background-color: var(--order-btn-active);
 }/*# sourceMappingURL=main.css.map */

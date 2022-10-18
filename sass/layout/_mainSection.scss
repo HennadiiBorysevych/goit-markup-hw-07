@@ -43,9 +43,8 @@ color: var(--btn-text-color);
     line-height: 1.87;
     letter-spacing: 0.06em;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @extend %align;
+    
     min-width: 216px;
     height: 50px;
     border: none;
@@ -59,9 +58,10 @@ color: var(--btn-text-color);
     margin-right: auto;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-section__button:hover, 
-.main-section__button:focus{
-    background-color: var(--order-btn-active);
+
+    &:hover,
+    &:focus {
+            background-color: var(--order-btn-active);
     
+        }
 }
