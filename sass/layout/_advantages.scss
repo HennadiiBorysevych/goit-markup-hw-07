@@ -61,3 +61,25 @@
     margin: 0;
     padding: 0;
 }
+.advantages-list__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+}
+.advantages-list__text {
+    margin-top: 10px;
+    margin-bottom: 0;
+    margin-right: 0;
+
+    font-size: 14px;
+    line-height: 1.71;
+}
+
+.advantages-list__item {
+    width: 270px;
+}
