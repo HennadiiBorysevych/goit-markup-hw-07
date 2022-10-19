@@ -62,21 +62,23 @@
 
 }
 
-.site-nav .site-nav__link--blue {
+.site-nav__link--blue {
     color: var(--accent-text-color);
+
+    &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 4px;
+            bottom: -1px;
+    
+            background: #2196F3;
+            border-radius: 2px;
+        }
 }
 
 
-.site-nav__link--blue::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    bottom: -1px;
 
-    background: #2196F3;
-    border-radius: 2px;
-}
 
 .site-nav .site-nav__link,
 .contacts .contacts__link {

@@ -32,7 +32,7 @@
 }
 
 .subscribe-form__button, .clients-list__link, .employee-social-list__link,
-.company-social-list__link, .examples-description, .advantages-list__icon, .main-section__button, .modal-window__button {
+.company-social-list__link, .examples-list__description, .advantages-list__icon, .main-section__button, .modal-window__button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,10 +314,9 @@ textarea:focus {
   margin-left: 93px;
 }
 
-.site-nav .site-nav__link--blue {
+.site-nav__link--blue {
   color: var(--accent-text-color);
 }
-
 .site-nav__link--blue::after {
   content: "";
   position: absolute;
@@ -633,7 +632,7 @@ textarea:focus {
   height: 294px;
 }
 
-.examples-description {
+.examples-list__description {
   position: absolute;
   width: 100%;
   height: 70px;
@@ -641,7 +640,7 @@ textarea:focus {
   bottom: 0;
 }
 
-.examples-description__title {
+.examples-list__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -661,6 +660,7 @@ textarea:focus {
   font-size: 16px;
   line-height: 1.18;
   text-transform: none;
+  margin-top: 0;
 }
 
 .employee__position {
@@ -850,7 +850,7 @@ textarea:focus {
 
 input[placeholder=E-mail] {
   line-height: 1.25;
-  outline: none;
+  outline: 1px solid var(--accent-text-color);
   color: rgba(255, 255, 255, 0.6);
   padding-top: 15px;
   padding-bottom: 15px;

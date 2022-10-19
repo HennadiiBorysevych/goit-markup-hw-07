@@ -17,7 +17,7 @@
     height: 294px;
 }
 
-.examples-description {
+.examples-list__description {
     position: absolute;
 
     @extend %align;
@@ -28,7 +28,7 @@
     bottom: 0;
 }
 
-.examples-description__title {
+.examples-list__title {
 
     @include font(700, 14px, 1.14);
     text-align: center;
